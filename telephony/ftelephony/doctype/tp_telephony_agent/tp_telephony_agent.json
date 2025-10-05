@@ -5,7 +5,7 @@
  "creation": "2025-08-06 12:01:41.895745",
  "doctype": "DocType",
  "engine": "InnoDB",
- "field_order": [
+  "field_order": [
   "user",
   "user_name",
   "column_break_lekf",
@@ -17,7 +17,10 @@
   "call_receiving_device",
   "column_break_zgsa",
   "exotel",
-  "exotel_number"
+  "exotel_number",
+  "column_break_telnyx",
+  "telnyx",
+  "telnyx_number"
  ],
  "fields": [
   {
@@ -53,7 +56,7 @@
    "fieldname": "default_medium",
    "fieldtype": "Select",
    "label": "Default Medium",
-   "options": "\nTwilio\nExotel"
+   "options": "\nTwilio\nExotel\nTelnyx"
   },
   {
    "fieldname": "section_break_riia",
@@ -94,6 +97,22 @@
    "fieldname": "exotel_number",
    "fieldtype": "Data",
    "label": "Exotel Number"
+  },
+  {
+   "fieldname": "column_break_telnyx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "telnyx",
+   "fieldtype": "Check",
+   "label": "Telnyx"
+  },
+  {
+   "depends_on": "telnyx",
+   "fieldname": "telnyx_number",
+   "fieldtype": "Data",
+   "label": "Telnyx Number"
   }
  ],
  "grid_page_length": 50,

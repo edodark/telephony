@@ -1,0 +1,1 @@
+# Telnyx Settings DocType
